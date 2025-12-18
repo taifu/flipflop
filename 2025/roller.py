@@ -4,7 +4,6 @@ ground3 = highest3 = inc3 = 0
 fib = [0, 1]
 last = None
 for char in list(open("roller.txt").read().strip()):
-#for char in list("^^^^^"):
     ground += (inc := {'^': 1, 'v': -1}[char])
     highest = max(highest, ground)
     if last == char:
