@@ -8,10 +8,8 @@ def reset(data):
     return birds
 
 birds = reset(data)
-
 size = 1000
 frame = 250
-
 for bird, (speed, xy) in birds.items():
     next_xy = xy + speed * 100
     birds[bird] = (speed, complex(next_xy.real % size, next_xy.imag % size))

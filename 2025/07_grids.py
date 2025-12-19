@@ -1,20 +1,8 @@
 import math
 
-
-data = """2 2
-3 3
-2 3
-"""
-data = open("grids.txt").read()
-
-data = data.strip().splitlines()
-
-def reset(data):
-    grids = {}
-    for n, line in enumerate(data):
-        grids[n] = tuple(int(p) for p in line.split())
-    return grids
-grids = reset(data)
+grids = {}
+for n, line in enumerate(open("grids.txt").read().strip().splitlines()):
+    grids[n] = tuple(int(p) for p in line.split())
 
 tot = 0
 for x, y in grids.values():
